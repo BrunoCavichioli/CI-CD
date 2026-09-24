@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farmácia Parecetaloka - Total do pedido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="pagina estreita">
+    <header class="topo">
+        <h1>Farmácia Parecetaloka</h1>
+        <p>Calcule o total do pedido com o desconto do cliente.</p>
+    </header>
+
+    <form class="formulario" method="post" action="calcular.php">
+        <label class="campo">
+            <span>Nome do cliente</span>
+            <input type="text" name="nome" autocomplete="off" required>
+        </label>
+
+        <label class="campo">
+            <span>Total do pedido (R$)</span>
+            <input type="text" name="total" inputmode="decimal" placeholder="0,00" required>
+        </label>
+
+        <fieldset class="campo">
+            <legend>Faixa etária</legend>
+            <div class="opcoes">
+                <label class="opcao">
+                    <input type="radio" name="faixa" value="1" checked>
+                    <span class="opcao-rotulo">Até 50 anos</span>
+                    <span class="opcao-desc">sem desconto</span>
+                </label>
+                <label class="opcao">
+                    <input type="radio" name="faixa" value="2">
+                    <span class="opcao-rotulo">51 a 69 anos</span>
+                    <span class="opcao-desc">5% de desconto</span>
+                </label>
+                <label class="opcao">
+                    <input type="radio" name="faixa" value="3">
+                    <span class="opcao-rotulo">70 anos ou mais</span>
+                    <span class="opcao-desc">7% de desconto</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <label class="fidelidade">
+            <input type="checkbox" name="fidelidade" value="1">
+            <span>Pagamento com cartão fidelidade <small>+5% de desconto</small></span>
+        </label>
+
+        <button type="submit">Calcular total</button>
+    </form>
+</main>
+</body>
+</html>
