@@ -128,3 +128,7 @@ tr.final td {
     background: #fef2f2;
     border-radius: 8px;
 }
+
+/* Parcelamento */
+.parcelas { margin-top: 16px; }
+.parcelas h2 { margin: 0 0 8px; font-size: 18px; color: #0f766e; }

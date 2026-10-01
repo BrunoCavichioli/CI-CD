@@ -90,6 +90,36 @@ function real($v) {
                 </tr>
             </table>
         </section>
+
+        <section class="resultado parcelas">
+            <h2>Parcelamento (usando for)</h2>
+            <table>
+                <?php for ($i = 1; $i <= 6; $i++): ?>
+                    <tr>
+                        <td><?= $i ?>x</td>
+                        <td>de <?= real($totalFinal / $i) ?></td>
+                    </tr>
+                <?php endfor; ?>
+            </table>
+        </section>
+
+        <section class="resultado parcelas">
+            <h2>Parcelamento (usando while)</h2>
+            <table>
+                <?php
+                $i = 1;
+                while ($i <= 6):
+                ?>
+                    <tr>
+                        <td><?= $i ?>x</td>
+                        <td>de <?= real($totalFinal / $i) ?></td>
+                    </tr>
+                <?php
+                    $i++;
+                endwhile;
+                ?>
+            </table>
+        </section>
     <?php endif; ?>
 
     <a class="voltar" href="index.html">Novo cálculo</a>
